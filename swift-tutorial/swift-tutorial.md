@@ -1,7 +1,8 @@
 **Welcome to the Swift Tutorial!**
 ----------------------------------
 
-![](file:////Users/gabriel.l.mazzei/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image002.jpg)
+
+
 ------------------------------------------------------------------------------------------------------------------------------
 
 **Resources**
