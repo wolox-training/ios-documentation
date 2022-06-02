@@ -1,7 +1,7 @@
 **Welcome to the Swift Tutorial!**
 ----------------------------------
 
-
+<img width="1000" alt="image" src="https://user-images.githubusercontent.com/88003574/171659201-db627d62-eb3e-482b-93ef-847664f63238.png">
 
 ------------------------------------------------------------------------------------------------------------------------------
 
@@ -19,13 +19,13 @@ This guide is based on these tutorials:
 
 When you open Xcode, it will greet you with the following welcome screen:
 
-![Welcome to Xcode](file:////Users/gabriel.l.mazzei/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image004.jpg)
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/88003574/171659301-92d881d3-d9fb-4968-bb6a-b54133b865ad.png">
 
 If you don't see this screen, it's most likely because the Show this window when Xcode launches option was unchecked. You can also open the screen by pressing Command-Shift-1. You can also click Window ▸ Welcome to Xcode from the menu bar.
 
 From the Welcome screen, you can jump quickly into a playground by clicking on Get started with a playground. Click on that now and Xcode will present you with a choice of templates.
 
-![Template](file:////Users/gabriel.l.mazzei/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image006.jpg)
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/88003574/171659348-61eff048-fff9-4ebe-adcd-40b4329b3dfa.png">
 
 The platform you choose simply defines which version of the template Xcode will use to create the playground. Currently, your options are iOS, macOS or tvOS. Each platform comes with its own environment set up and ready for you to begin playing around inside with code. For the purposes of this tutorial, choose whichever platform you wish. You won't be write any platform-specific code; instead, you'll learn the core principles of the Swift language.
 
@@ -33,7 +33,7 @@ Select the Blank template and click Next. Xcode will now ask you to name the pla
 
 Click Create to create and save the playground. Xcode then presents you with the playground, like so:
 
-![Create](file:////Users/gabriel.l.mazzei/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image008.jpg)
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/88003574/171659391-f9cf3f38-88fe-4bfc-9e33-9f874078008b.png">
 
 New playgrounds don't start entirely empty but have some basic starter code to get you going. Don't worry --- you'll soon learn what this code means.
 
@@ -41,7 +41,7 @@ Playgrounds Overview
 
 At first glance, a playground may look like a rather fancy text editor. Well, here's some news for you: It's essentially just that!
 
-![Overview](file:////Users/gabriel.l.mazzei/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image010.jpg)
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/88003574/171659434-5af4a0a7-9e83-46cc-8a6d-492acadddb46.png">
 
 The screenshot above highlights the first and most important things to know about the following:
 
@@ -98,7 +98,7 @@ print("Hello, Swift Apprentice reader!")
 
 This will output a nice message to the debug area, like so:
 
-![Print](file:////Users/gabriel.l.mazzei/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image012.jpg)
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/88003574/171659581-4066d28e-eee6-4211-b0d8-1ea4b9fd758b.png">
 
 You can hide or show the debug area using the downward-arrow-in-a-box button highlighted in red in the image above. You can also click **View** ▸ **Debug Area** ▸ **Show Debug Area** in the menu bar to do the same thing.
 
@@ -203,7 +203,7 @@ Cannot assign to value: 'number' is a 'let' constant
 
 In Xcode, you would see the error represented this way:
 
-![Error](file:////Users/gabriel.l.mazzei/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image013.jpg)
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/88003574/171659676-e83bab74-9afa-4d24-a02b-438d9f4fa043.png">
 
 Constants are useful for values that aren't going to change. For example, if you were modeling an airplane and needed to keep track of the total number of seats available, you could use a constant.
 
@@ -236,7 +236,7 @@ To change a variable, you simply assign it a new value.
 
 This is a good time to take a closer look at the results sidebar of the playground. When you type the code above into a playground, you'll see that the results sidebar on the right shows the current value of variableNumber at each line:
 
-![Variables](file:////Users/gabriel.l.mazzei/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image015.jpg)
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/88003574/171659741-e1b7c30b-1e6f-4dec-b2a4-3b10337f47cf.png">
 
 The results sidebar will show a relevant result for each line if one exists. In the case of a variable or constant, the result will be the new value, whether you've just declared a constant, or if you've declared or reassigned a variable.
 
@@ -349,7 +349,7 @@ let typeInferredInt = 42
 
 Sometimes, it's useful to check the inferred type of a variable or constant. You can do this in a playground by holding down the **Option** key and clicking on the variable's or constant's name. Xcode will display a popover like this:
 
-![Inferred Int](file:////Users/gabriel.l.mazzei/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image017.jpg)
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/88003574/171659808-b3a7da3e-af0c-40e5-a5c8-e41a2d144c40.png">
 
 Xcode tells you the inferred type by giving you the declaration that you would have had to use if there were no type inference. In this case, the type is Int.
 
@@ -361,7 +361,7 @@ let typeInferredDouble = 3.14159
 
 Option-clicking on this reveals the following:
 
-![Inferred Double](file:////Users/gabriel.l.mazzei/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image019.jpg)
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/88003574/171659841-6a1aa84c-4d33-4e91-965c-896592db031c.png">
 
 Type inference isn't magic. Swift is simply doing what your brain does very easily. Programming languages that don't use type inference can often feel verbose, because you need to specify the often obvious type each time you declare a variable or constant.
 
@@ -632,7 +632,7 @@ One of the truly great features of Swift is how it formalizes the idea of type c
 
 In the case of integers, the functionality can be diagrammed like so:
 
-![Integer Protocols](file:////Users/gabriel.l.mazzei/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image021.jpg)
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/88003574/171660007-bec8035c-b96d-47c7-baaa-a20c67e3a0e8.png">
 
 The arrows indicate conformance to (sometimes called *adoption of*) a protocol. While this graph does not show all of the protocols that integer types conform to, it gives you insight into how things are organized.
 
@@ -899,7 +899,7 @@ while  true {
 
 This is a while loop that never ends because the condition is always true. Of course, you would never write such a while loop, because your program would spin forever! This situation is known as an **infinite loop**, and while it might not cause your program to crash, it will very likely cause your computer to freeze.
 
-![force_quit](file:////Users/gabriel.l.mazzei/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image023.jpg)
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/88003574/171660095-c28dc7d9-6a8e-4ebd-9678-b3e79dfa3901.png">
 
 Here's a more useful example of a while loop:
 
@@ -1043,11 +1043,11 @@ In terms of scope, the i constant is only visible inside the scope of the for lo
 
 Xcode's playground gives you a handy way to visualize such an iteration. Hover over the sum += i line in the results pane, and you'll see a white dot on the right. Hover over that dot to reveal a plus (+) button:
 
-![loop_before_graph](file:////Users/gabriel.l.mazzei/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image025.jpg)
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/88003574/171660184-5421b310-03ef-40fa-8995-0ade7cc0604d.png">
 
 Click this plus (+) button and Xcode will display a graph underneath the line within the playground code editor:
 
-![loop_after_graph](file:////Users/gabriel.l.mazzei/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image027.jpg)
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/88003574/171660207-a3bd1d60-acff-4a29-8b81-c90fb014546c.png">
 
 This graph lets you visualize the sum variable as the loop iterates.
 
