@@ -10,11 +10,9 @@
 
 This guide is based on these tutorials:
 
-● [Swift Tutorial Part 1: Expressions, Variables and Constants](https://www.raywenderlich.com/6338-swift-tutorial-part-1-expressions-variables-and-constants)
-
-● [Swift Tutorial Part 2: Types and Operations](https://www.raywenderlich.com/6364-swift-tutorial-part-2-types-and-operations)
-
-● [Swift Tutorial Part 3: Flow Control](https://www.raywenderlich.com/965-swift-tutorial-part-3-flow-control)
+- [Swift Tutorial Part 1: Expressions, Variables and Constants](https://www.raywenderlich.com/6338-swift-tutorial-part-1-expressions-variables-and-constants)
+- [Swift Tutorial Part 2: Types and Operations](https://www.raywenderlich.com/6364-swift-tutorial-part-2-types-and-operations)
+- [Swift Tutorial Part 3: Flow Control](https://www.raywenderlich.com/965-swift-tutorial-part-3-flow-control)
 
 **Creating a Playground**
 -------------------------
@@ -48,9 +46,13 @@ At first glance, a playground may look like a rather fancy text editor. Well, he
 The screenshot above highlights the first and most important things to know about the following:
 
 1.  **Source editor**: This is the area in which you'll write your Swift code. It's much like a text editor such as Notepad or TextEdit. You'll notice that it uses what's known as a monospace font, which means all characters are the same width. This makes the code much easier to read and format.
+
 2.  **Results sidebar:** This area shows the results when you execute your code. You'll learn more about how code is executed as you read through the series. The results sidebar is the main place that you'll look to confirm your code is working as expected.
+
 3.  **Execution control**: Playgrounds execute automatically by default, meaning you can write code and immediately see the output. This control allows you to execute the playground again. Holding down the ▶︎ (Execute) button allows you to switch between automatic execution and manual execution modes.
+
 4.  **Activity viewer**: This shows the status of the playground. In the screenshot above, it shows that the playground has finished executing and is ready to handle more code in the source editor. When the playground is executing, the viewer will indicate this with a spinner.
+
 5.  **Panel controls**: These toggle switches show and hide three panels, one that appears on the left, one on the bottom and one on the right. The panels each display extra information that you may need to access from time to time. You'll usually keep them hidden, as they are in the screenshot. You'll learn more about each of these panels as you move through the series.
 
 Playgrounds execute the code in the source editor from top to bottom. Every time you change the code, the playground will re-execute everything. You can also force a re-execution by clicking Editor ▸ Run Playground in the menu bar. Alternatively, you can use the execution control.
@@ -68,22 +70,18 @@ Swift, like most other programming languages, allows you to document your code t
 
 Single line comment:
 
-|
-
+```
 // This is a comment. It is not executed.
-
- |
+```
 
 Multi line comment:
 
-|
-
- /* This is also a comment.\
-         Over many...\
-         many...\
+```
+ /* This is also a comment.
+         Over many...
+         many...
          many lines. */
-
- |
+ ```
 
 **Printing Out**
 ----------------
@@ -94,11 +92,9 @@ print will output whatever you want to the **debug area**, which is sometimes re
 
 For example, consider the following code:
 
-|
-
+```
 print("Hello, Swift Apprentice reader!")
-
- |
+```
 
 This will output a nice message to the debug area, like so:
 
@@ -112,18 +108,14 @@ All operations in Swift use a symbol known as the **operator** to denote the typ
 
 Consider the four arithmetic operations that you learned in your early school days: addition, subtraction, multiplication and division. For these simple operations, Swift uses the following operators:
 
-● Add: +
-
-● Subtract: -
-
-● Multiply: *
-
-● Divide: /
+- Add: +
+- Subtract: -
+- Multiply: *
+- Divide: /
 
 These operators are used like so:
 
-|
-
+```
 2 + 6
 
 10 - 2
@@ -131,8 +123,7 @@ These operators are used like so:
 2 * 4
 
 24 / 3
-
- |
+```
 
 Each of these lines is what is known as an **expression**. An expression has a value. In these cases, all four expressions have the same value: 8.
 
@@ -142,21 +133,17 @@ All of the operations above have used whole numbers, more formally known as **in
 
 As an example, consider the following:
 
-|
-
+```
 22.0 / 7.0
-
- |
+```
 
 This, you may be surprised to know, results in the number 3. This is because, if you only use integers in your expression, Swift makes the result an integer. In this case, the result is rounded down to the next integer.
 
 You can tell Swift to use decimal numbers by changing it to the following:
 
-|
-
+```
 22.0 / 7.0
-
- |
+```
 
 This time, the result is 3.142857142857143, as expected.
 
@@ -166,11 +153,9 @@ The four operations you've seen so far are easy to understand because you've bee
 
 There are many times that it is necessary to use multiple operators to calculate a value. Here's an example of how to do this in Swift:
 
-|
-
+```
 ((8000 / (5 * 10)) - 32))+ (29 % 5)
-
- |
+```
 
 Notice the use of parentheses, which, in Swift, serve two purposes: to make it clear to anyone reading the code --- including yourself --- what you meant, and to disambiguate.
 
@@ -187,11 +172,9 @@ You'll learn about some of the basic types next, and you'll encounter many other
 
 Take a look at this:
 
-|
-
+```
 let number: Int = 10
-
- |
+ ```
 
 This declares a constant called number, which is of type Int. Then, it sets the value of the constant to the number 10.
 
@@ -199,11 +182,9 @@ This declares a constant called number, which is of type Int. Then, it sets the 
 
 The type Int can store integers. The way you store decimal numbers is like so:
 
-|
-
+```
 let pi: Double = 3.14159
-
- |
+```
 
 This is similar to the Int constant, except the name and the type are different. This time, the constant is a Double, a type that can store decimals with high precision.
 
@@ -211,12 +192,10 @@ There's also a type called Float, short for floating point, that stores decimals
 
 Once you've declared a constant, you can't change its data. For example, consider the following code:
 
-|
-
-let number: Int = 10\
+```
+let number: Int = 10
 number = 0
-
- |
+```
 
 This code produces an error:
 
@@ -238,22 +217,18 @@ If your program's data never changed, then it would be a rather boring program! 
 
 When you know you'll need to change some data, you should use a variable to represent that data instead of a constant. You declare a variable in a similar way, like so:
 
-|
-
+```
 var variableNumber: Int = 42
-
- |
+```
 
 Only the first part of the statement is different: You declare constants using let, whereas you declare variables using var.
 
 Once you've declared a variable, you're free to change it to whatever you wish, as long as the type remains the same. For example, to change the variable declared above, you could do this:
 
-|
-
-variableNumber = 0\
+```
+variableNumber = 0
 variableNumber = 1_000_000
-
- |
+```
 
 To change a variable, you simply assign it a new value.
 
@@ -271,41 +246,33 @@ Always try to choose meaningful names for your variables and constants. Good nam
 
 A good name *specifically* describes what the variable or constant represents. Here are some examples of good names:
 
-● personAge
-
-● numberOfPeople
-
-● gradePointAverage
+- personAge
+- numberOfPeople
+- gradePointAverage
 
 Often, a bad name is simply not descriptive enough. Here are some examples of bad names:
 
-● a
-
-● temp
-
-● average
+- a
+- temp
+- average
 
 The key is to ensure that you'll understand what the variable or constant refers to when you read it again later. Don't make the mistake of thinking you have an infallible memory! It's common in computer programming to look back at your own code as early as a day or two later and have forgotten what it does. Make it easier for yourself by giving your variables and constants intuitive, precise names.
 
 Also, note how the names above are written. In Swift, it is common to **camel case**names, explained below. For variables and constants, follow these rules to properly case your names:
 
-● Start with a lowercase letter.
-
-● If the name is made up of multiple words, join them together and start each subsequent word with an uppercase letter.
-
-● If one of these words is an abbreviation, write the entire abbreviation in the same case (e.g., sourceURL and urlDescription).
+- Start with a lowercase letter.
+- If the name is made up of multiple words, join them together and start each subsequent word with an uppercase letter.
+- If one of these words is an abbreviation, write the entire abbreviation in the same case (e.g., sourceURL and urlDescription).
 
 **Types**
 
 Sometimes, you'll have data in one format and need to convert it to another. The naïve way to attempt this would be like so:
 
-|
-
-var integer: Int = 100\
-var decimal: Double = 12.5\
+```
+var integer: Int = 100
+var decimal: Double = 12.5
 integer = decimal
-
- |
+```
 
 Swift will complain if you try to do this and spit out an error on the third line:
 
@@ -317,13 +284,11 @@ Remember, computers rely on programmers to tell them what to do. In Swift, that 
 
 Instead of simply assigning, you need to explicitly write that you want to convert the type. You do it like so:
 
-|
-
-var integer: Int = 100\
-var decimal: Double = 12.5\
+```
+var integer: Int = 100
+var decimal: Double = 12.5
 integer = Int(decimal)
-
- |
+```
 
 The assignment on the third line now tells Swift, unequivocally, that you want to convert from the original type, Double, to the new type, Int.
 
@@ -335,13 +300,11 @@ So far, you've only seen operators acting independently on integers or doubles. 
 
 You might think you could do it like this:
 
-|
-
-let hourlyRate: Double = 19.5\
-let hoursWorked: Int = 10\
+```
+let hourlyRate: Double = 19.5
+let hoursWorked: Int = 10
 let totalCost: Double = hourlyRate * hoursWorked
-
- |
+```
 
 If you try that, you'll get an error on the final line:
 
@@ -355,13 +318,11 @@ In this example, you want the result to be a Double. You don't want an Int, beca
 
 You need to tell Swift you want it to consider the hoursWorked constant to be a Double, like so:
 
-|
-
-let hourlyRate: Double = 19.5\
-let hoursWorked: Int = 10\
+```
+let hourlyRate: Double = 19.5
+let hoursWorked: Int = 10
 let totalCost: Double = hourlyRate * Double(hoursWorked)
-
- |
+```
 
 Now, each of the operands will be a Double when Swift multiplies them, so totalCost is a Double as well.
 
@@ -369,12 +330,11 @@ Now, each of the operands will be a Double when Swift multiplies them, so totalC
 
 Up to this point, each time you've seen a variable or constant declared, it's been accompanied by an associated type, like this:
 
-|
-
-let integer: Int = 42\
+```
+let integer: Int = 42
 let double: Double = 3.14159
+```
 
- |\
 You may be asking yourself: "Why must I write the : Int and : Double, when the right-hand side of the assignment *is already* an Int or a Double?" It's redundant, to be sure; you can see this without too much work.
 
 It turns out that the Swift compiler can deduce this as well. It doesn't need you to tell it the type all the time --- it can figure it out on its own. This is done through a process called **type inference**. Not all programming languages have this, but Swift does, and it's a key component of Swift's power as a language.
@@ -383,11 +343,9 @@ So you can simply drop the type in most places where you see one.
 
 For example, consider the following constant declaration:
 
-|
-
+```
 let typeInferredInt = 42
-
- |
+```
 
 Sometimes, it's useful to check the inferred type of a variable or constant. You can do this in a playground by holding down the **Option** key and clicking on the variable's or constant's name. Xcode will display a popover like this:
 
@@ -397,11 +355,9 @@ Xcode tells you the inferred type by giving you the declaration that you would h
 
 It works for other types, too:
 
-|
-
+```
 let typeInferredDouble = 3.14159
-
- |
+```
 
 Option-clicking on this reveals the following:
 
@@ -411,39 +367,31 @@ Type inference isn't magic. Swift is simply doing what your brain does very easi
 
 Sometimes, you want to define a constant or variable and ensure it's a certain type, even though what you're assigning to it is a different type. You saw earlier how you can convert from one type to another. For example, consider the following:
 
-|
-
+```
 let wantADouble = 3
-
- |
+```
 
 Here, Swift infers the type of wantADouble as Int. But what if you wanted Double instead?
 
 What you could do is the following:
 
-|
-
+```
 let actuallyDouble = Double(3)
-
- |
+```
 
 This is the same as you saw before with type conversion.
 
 Another option would be not to use type inference at all and do the following:
 
-|
-
+```
 let actuallyDouble: Double = 3
-
- |
+```
 
 There is a third option, like so:
 
-|
-
+```
 let actuallyDouble = 3  as  Double
-
- |
+```
 
 This uses a new keyword you haven't seen before, as, which also performs a type conversion.
 
@@ -453,11 +401,9 @@ A literal number value that doesn't contain a decimal point can also be used as 
 
 Literal number values that *do* contain a decimal point cannot be integers. This means you could have avoided this entire discussion had you started with:
 
-|
-
+```
 let wantADouble = 3.0
-
- |
+```
 
 Sorry! (Not sorry!) :]
 
@@ -477,37 +423,29 @@ Swift, like any good programming language, can work directly with characters and
 
 The Character data type can store a single character. For example:
 
-|
-
+```
 let characterA: Character = "a"
-
- |
+```
 
 This stores the character **a**. It can hold any character --- even an emoji:
 
-|
-
+```
 let characterDog: Character = "🐶"
-
- |
+```
 
 But this data type is designed to hold only single characters. The String data type, on the other hand, stores multiple characters. For example:
 
-|
-
+```
 let stringDog: String = "Dog"
-
- |
+```
 
 The right-hand side of this expression is what's known as a **string literal**; it's the Swift syntax for representing a string.
 
 Of course, type inference applies here as well. If you remove the type in the above declaration, then Swift does the right thing and makes the stringDog a String constant:
 
-|
-
+```
 let stringDog = "Dog"  // Inferred to be of type String
-
- |
+```
 
 **Note**: There's no such thing as a character literal in Swift. A character is simply a string of length one. However, Swift infers the type of any string literal to be String, so if you want a Character instead, you must make the type explicit.
 
@@ -517,13 +455,11 @@ You can do much more than create simple strings. Sometimes, you need to manipula
 
 In Swift, you do this in a rather simple way: by using the addition operator. Just as you can add numbers, you can add strings:
 
-|
-
-var message = "Hello" + " my name is "\
-let name = "Lorenzo"\
+```
+var message = "Hello" + " my name is "
+let name = "Lorenzo"
 message += name // "Hello my name is Lorenzo"
-
- |
+```
 
 You need to declare message as a variable rather than a constant because you want to modify it. You can add string literals together, as in the first line, and you can add string variables or constants together, as in the last line.
 
@@ -531,12 +467,10 @@ It's also possible to add characters to a string. However, Swift's strictness wi
 
 To add a character to a string, you do this:
 
-|
-
-let exclamationMark: Character = "!"\
+```
+let exclamationMark: Character = "!"
 message += String(exclamationMark) // "Hello my name is Lorenzo!"
-
- |
+```
 
 With this code, you explicitly convert the Character to a String before you add it to message.
 
@@ -544,23 +478,19 @@ With this code, you explicitly convert the Character to a String before you add 
 
 You can also build up a string by using **interpolation**, which is a special Swift syntax that lets you build a string in a way that's easy to read:
 
-|
-
-let name = "Lorenzo"\
+```
+let name = "Lorenzo"
 let messageInOne = "Hello my name is \(name)!"  // "Hello my name is Lorenzo!"
 
- |
-
+```
 The above is much more readable than the example from the previous section. It's an extension of the string literal syntax, whereby you replace certain parts of the string with other values. You enclose the value you want to give the string in parentheses preceded by a backslash.
 
 This syntax works in just the same way to build a string from other data types, such as numbers:
 
-|
-
-let oneThird = 1.0 / 3.0\
+```
+let oneThird = 1.0 / 3.0
 let oneThirdLongString = "One third is \(oneThird) as a decimal."
-
- |
+```
 
 Here, you use a Double in the interpolation. At the end of this code, your oneThirdLongString constant will contain the following:
 
@@ -576,18 +506,16 @@ Swift has a neat way to express strings that contain multiple lines. This can be
 
 You do it like so:
 
-|
-
-let bigString = """\
-  You can have a string\
-  that contains multiple\
-  lines\
-  by\
-  doing this.\
-  """\
+```
+let bigString = """
+  You can have a string
+  that contains multiple
+  lines
+  by
+  doing this.
+  """
 print(bigString)
-
- |
+```
 
 The three double-quotes signify that this is a multi-line string. Handily, the first and final new lines do not become part of the string. This makes it more flexible as you don't have to have the three double-quotes on the same line as the string.
 
@@ -614,47 +542,37 @@ In Swift, you can represent such related data in a very simple way through the u
 
 A tuple is a type that represents data composed of more than one value of any type. You can have as many values in your tuple as you like. For example, you can define a pair of 2D coordinates wherein each axis value is an integer, like so:
 
-|
-
+```
 let coordinates: (Int, Int) = (2, 3)
-
- |
+```
 
 The type of coordinates is a tuple containing two Int values. The types of the values within the tuple, in this case Int, are separated by commas surrounded by parentheses. The code for creating the tuple is much the same, with each value separated by commas and surrounded by parentheses.
 
 Type inference can infer tuple types, too:
 
-|
-
+```
 let coordinatesInferred = (2, 3) // Inferred to be of type (Int, Int)
-
- |
+```
 
 You could similarly create a tuple of Double values, like so:
 
-|
-
+```
 let coordinatesDoubles = (2.1, 3.5) // Inferred to be of type (Double, Double)
-
- |
+```
 
 Or you could mix and match the types comprising the tuple, like so:
 
-|
-
+```
 let coordinatesMixed = (2.1, 3) // Inferred to be of type (Double, Int)
-
- |
+```
 
 And here's how to access the data inside a tuple:
 
-|
-
-let coordinates = (2, 3)\
-let x1 = coordinates.0\
+```
+let coordinates = (2, 3)
+let x1 = coordinates.0
 let y1 = coordinates.1
-
- |
+```
 
 You can reference each item in the tuple by its position in the tuple, starting with zero. So, in this example, x1 will equal 2 and y1 will equal 3.
 
@@ -664,49 +582,42 @@ In the previous example, it may not be immediately obvious that the first value,
 
 Fortunately, Swift allows you to name the individual parts of a tuple and you can be explicit about what each part represents. For example:
 
-|
-
+```
 let coordinatesNamed = (x: 2, y: 3) // Inferred to be of type (x: Int, y: Int)
-
- |
+```
 
 Here, the code annotates the values of coordinatesNamed to contain a label for each part of the tuple.
 
 Then, when you need to access each part of the tuple, you can access it by its name:
 
-|
-
-let x2 = coordinatesNamed.x\let y2 = coordinatesNamed.y
-
- |
+```
+let x2 = coordinatesNamed.x
+let y2 = coordinatesNamed.y
+```
 
 This is much clearer and easier to understand. More often than not, it's helpful to name the components of your tuples.
 
 If you want to access multiple parts of the tuple at the same time, as in the examples above, you can also use a shorthand syntax to make it easier:
 
-|
-
-let coordinates3D = (x: 2, y: 3, z: 1)\
+```
+let coordinates3D = (x: 2, y: 3, z: 1)
 let (x3, y3, z3) = coordinates3D
-
- |
+```
 
 This declares three new constants, x3, y3 and z3, and assigns each part of the tuple to them in turn. The code is equivalent to the following:
 
-|
-
-let coordinates3D = (x: 2, y: 3, z: 1)\
-let x3 = coordinates3D.x\let y3 = coordinates3D.y\let z3 = coordinates3D.z
-
- |
+```
+let coordinates3D = (x: 2, y: 3, z: 1)
+let x3 = coordinates3D.x
+let y3 = coordinates3D.y
+let z3 = coordinates3D.z
+```
 
 If you want to ignore a certain element of the tuple, you can replace the corresponding part of the declaration with an underscore. For example, if you were performing a 2D calculation and wanted to ignore the z-coordinate of coordinates3D, then you'd write the following:
 
-|
-
+```
 let (x4, y4, _) = coordinates3D
-
- |
+```
 
 This line of code only declares x4 and y4. The _ is special and simply means that you're ignoring this part for now.
 
@@ -733,42 +644,34 @@ Booleans are commonly used to compare values. For example, you may have two valu
 
 In Swift, you do this using the **equality operator**, which is denoted by ==:
 
-|
-
+```
 let doesOneEqualTwo = (1 == 2)
-
- |
+```
 
 Swift infers that doesOneEqualTwo is a Bool. Clearly, 1 does not equal 2, and therefore doesOneEqualTwo will be false.
 
 Similarly, you can find out if two values are *not* equal using the != operator:
 
-|
-
+```
 let doesOneNotEqualTwo = (1 != 2)
-
- |
+```
 
 This time, the comparison is true because 1 does not equal 2, so doesOneNotEqualTwo will be true.
 
 The prefix ! operator, also called the not-operator, toggles true to false and false to true. Another way to write the above is:
 
-|
-
+```
 let alsoTrue = !(1 == 2)
-
- |
+```
 
 Because 1 does not equal 2, (1==2) is false, and then ! flips it to true.
 
 Two more operators let you determine if a value is greater than (>) or less than (<) another value. You'll likely know these from mathematics:
 
-|
-
-let isOneGreaterThanTwo = (1 > 2)\
+```
+let isOneGreaterThanTwo = (1 > 2)
 let isOneLessThanTwo = (1 < 2)
-
- |
+```
 
 And it's not rocket science to work out that isOneGreaterThanTwo will equal falseand isOneLessThanTwo will equal true.
 
@@ -784,11 +687,9 @@ One way to combine conditions is by using **AND**. When you AND together two Boo
 
 In Swift, the operator for Boolean AND is &&, used like so:
 
-|
-
+```
 let and = true && true
-
- |
+```
 
 In this case, and will be true. If either of the values on the right was false, then and would be false.
 
@@ -796,11 +697,9 @@ Another way to combine conditions is by using **OR**. When you OR together two B
 
 In Swift, the operator for Boolean OR is ||, used like so:
 
-|
-
+```
 let or = true || false
-
- |
+```
 
 In this case, or will be true. If both values on the right were false, then orwould be false. If both were true, then or would still be true.
 
@@ -809,26 +708,25 @@ In this case, or will be true. If both values on the right were false, then orwo
 
 The first and most common way of controlling the flow of a program is through the use of an **if**** statement**, which allows the program to do something only *if* a certain condition is true. For example, consider the following:
 
-|
-
-if  2 > 1 {\ print("Yes, 2 is greater than 1.")\
+```
+if  2 > 1 { 
+    print("Yes, 2 is greater than 1.")
 }
-
- |
+```
 
 This is a simple if statement. If the condition is true, then the statement will execute the code between the braces. If the condition is false, then the statement won't execute the code between the braces. It's as simple as that!
 
 You can extend an if statement to provide code to run in case the condition turns out to be false. This is known as the **else clause**. Here's an example:
 
-|
-
+```
 let animal = "Fox"
 
-if animal == "Cat" || animal == "Dog" {\ print("Animal is a house pet.")\
-} else {\ print("Animal is not a house pet.")\
+if animal == "Cat" || animal == "Dog" {
+    print("Animal is a house pet.")
+} else {
+    print("Animal is not a house pet.")
 }
-
- |
+```
 
 Here, if animal equals either "Cat" or "Dog", then the statement will run the first block of code. If animal does not equal either "Cat" or "Dog", then the statement will run the block inside the else part of the if statement, printing the following to the debug area:
 
@@ -838,27 +736,25 @@ But you can go even further than that with if statements. Sometimes you want to 
 
 You can use it like so:
 
-|
-
-let hourOfDay = 12\
+```
+let hourOfDay = 12
 let timeOfDay: String
 
-if hourOfDay < 6 {\
-  timeOfDay = "Early morning"\
-} else  if hourOfDay < 12 {\
-  timeOfDay = "Morning"\
-} else  if hourOfDay < 17 {\
-  timeOfDay = "Afternoon"\
-} else  if hourOfDay < 20 {\
-  timeOfDay = "Evening"\
-} else  if hourOfDay < 24 {\
-  timeOfDay = "Late evening"\
-} else {\
-  timeOfDay = "INVALID HOUR!"\
-}\
+if hourOfDay < 6 {
+  timeOfDay = "Early morning"
+} else  if hourOfDay < 12 {
+  timeOfDay = "Morning"
+} else  if hourOfDay < 17 {
+  timeOfDay = "Afternoon"
+} else  if hourOfDay < 20 {
+  timeOfDay = "Evening"
+} else  if hourOfDay < 24 {
+  timeOfDay = "Late evening"
+} else {
+  timeOfDay = "INVALID HOUR!"
+}
 print(timeOfDay)
-
- |
+```
 
 These nested if statements test multiple conditions one by one until a true condition is found. Only the code associated with that first true condition is executed, regardless of whether subsequent else-if conditions are true. In other words, the order of your conditions matters!
 
@@ -866,13 +762,13 @@ You can add an else clause at the end to handle the case where none of the condi
 
 In this example, the if statement takes a number representing an hour of the day and converts it to a string representing the part of the day to which the hour belongs. Working with a 24-hour clock, the statements are checked one-by-one in order:
 
-● The first check is to see if the hour is less than 6. If so, that means it's early morning.
+- The first check is to see if the hour is less than 6. If so, that means it's early morning.
 
-● If the hour is not less than 6, the statement continues to the first else-if, where it checks the hour to see if it's less than 12.
+- If the hour is not less than 6, the statement continues to the first else-if, where it checks the hour to see if it's less than 12.
 
-● Then in turn, as conditions prove false, the statement checks the hour to see if it's less than 17, then less than 20, then less than 24.
+- Then in turn, as conditions prove false, the statement checks the hour to see if it's less than 17, then less than 20, then less than 24.
 
-● Finally, if the hour is out of range, the statement prints that information to the console.
+- Finally, if the hour is out of range, the statement prints that information to the console.
 
 In the code above, the hourOfDay constant is 12. Therefore, the code will print the following:
 
@@ -890,20 +786,19 @@ You earn $25 for every hour up to 40 hours, and $50 for every hour thereafter.
 
 Using Swift, you can calculate your fee in this way:
 
-|
-
+```
 var hoursWorked = 45
 
-var price = 0\
-if hoursWorked > 40 {\ let hoursOver40 = hoursWorked - 40\
-  price += hoursOver40 * 50\
-  hoursWorked -= hoursOver40\
-}\
+var price = 0
+if hoursWorked > 40 {
+    let hoursOver40 = hoursWorked - 40
+    price += hoursOver40 * 50
+    hoursWorked -= hoursOver40
+}
 price += hoursWorked * 25
 
 print(price)
-
- |
+```
 
 This code takes the number of hours and checks if it's over 40. If so, the code calculates the number of hours over 40 and multiplies that by $50, then adds the result to the price. The code then subtracts the number of hours over 40 from the hours worked. It multiplies the remaining hours worked by $25 and adds that to the total price.
 
@@ -913,12 +808,10 @@ In the example above, the result is as follows:
 
 The interesting thing here is the code inside the if statement. There is a declaration of a new constant, hoursOver40, to store the number of hours over 40. Clearly, you can use it inside the if statement. But what happens if you try to use it at the end of the above code?
 
-|
-
-print(price)\
+```
+print(price)
 print(hoursOver40)
-
- |
+```
 
 This would result in the following error:
 
@@ -934,42 +827,42 @@ Now I want to introduce a new operator, one you didn't see in the previous tutor
 
 If you wanted to determine the minimum and maximum of two variables, you could use if statements, like so:
 
-|
-
-let a = 5\
+```
+let a = 5
 let b = 10
 
-let  min: Int\
-if a < b {\ min = a\
-} else {\ min = b\
-}\
-\let  max: Int\
-if a > b {\ max = a\
-} else {\ max = b\
+let  min: Int
+if a < b {
+    min = a
+} else {
+    min = b
 }
 
- |
+let  max: Int
+if a > b {
+    max = a
+} else { 
+    max = b
+}
+```
 
 By now you know how this works, but it's a lot of code. Wouldn't it be nice if you could shrink this to just a couple of lines? Well, you can, thanks to the ternary conditional operator!
 
 The ternary conditional operator takes a condition and returns one of two values, depending on whether the condition was true or false. The syntax is as follows:
 
-|
-
+```
 (<CONDITION>) ? <TRUE  VALUE> : <FALSE  VALUE>
-
- |
+```
 
 You can use this operator to rewrite your long code block above, like so:
 
-|
-
-let a = 5\
+```
+let a = 5
 let b = 10
 
-let  min = a < b ? a : b\let  max = a > b ? a : b
-
- |
+let  min = a < b ? a : b
+let  max = a > b ? a : b
+```
 
 In the first example, the condition is a < b. If this is true, the result assigned back to min will be the value of a; if it's false, the result will be the value of b.
 
@@ -988,24 +881,21 @@ A **while**** loop** repeats a block of code while a condition is true.
 
 You create a while loop this way:
 
-|
-
-while <CONDITION> {\
-  <LOOP  CODE>\
+```
+while <CONDITION> {
+  <LOOP  CODE>
 }
-
- |
+```
 
 Every iteration, the loop checks the condition. If the condition is true, then the loop executes and moves on to another iteration. If the condition is false, then the loop stops. Just like if statements, while loops introduce a scope.
 
 The simplest while loop takes this form:
 
-|
+```
+while  true {
 
-while  true {\
 }
-
- |
+```
 
 This is a while loop that never ends because the condition is always true. Of course, you would never write such a while loop, because your program would spin forever! This situation is known as an **infinite loop**, and while it might not cause your program to crash, it will very likely cause your computer to freeze.
 
@@ -1013,39 +903,37 @@ This is a while loop that never ends because the condition is always true. Of co
 
 Here's a more useful example of a while loop:
 
-|
-
+```
 var sum = 1
 
-while sum < 1000 {\
-  sum = sum + (sum + 1)\
+while sum < 1000 {
+  sum = sum + (sum + 1)
 }
-
- |
+```
 
 This code calculates a mathematical sequence, up to the point where the value is greater than 1000.
 
 The loop executes as follows:
 
-● **Before iteration 1:**  sum = 1, loop condition = true
+- **Before iteration 1:**  sum = 1, loop condition = true
 
-● **After iteration 1:**  sum = 3, loop condition = true
+- **After iteration 1:**  sum = 3, loop condition = true
 
-● **After iteration 2:**  sum = 7, loop condition = true
+- **After iteration 2:**  sum = 7, loop condition = true
 
-● **After iteration 3:**  sum = 15, loop condition = true
+- **After iteration 3:**  sum = 15, loop condition = true
 
-● **After iteration 4:**  sum = 31, loop condition = true
+- **After iteration 4:**  sum = 31, loop condition = true
 
-● **After iteration 5:**  sum = 63, loop condition = true
+- **After iteration 5:**  sum = 63, loop condition = true
 
-● **After iteration 6:**  sum = 127, loop condition = true
+- **After iteration 6:**  sum = 127, loop condition = true
 
-● **After iteration 7:**  sum = 255, loop condition = true
+- **After iteration 7:**  sum = 255, loop condition = true
 
-● **After iteration 8:**  sum = 511, loop condition = true
+- **After iteration 8:**  sum = 511, loop condition = true
 
-● **After iteration 9:**  sum = 1023, loop condition = false
+- **After iteration 9:**  sum = 1023, loop condition = false
 
 After the ninth iteration, the sum variable is 1023, and therefore the loop condition of sum < 1000 becomes false. At this point, the loop stops.
 
@@ -1055,16 +943,16 @@ Sometimes you want to break out of a loop early. You can do this using the break
 
 For example, consider the following code:
 
-|
-
+```
 var sum = 1
 
-while  true {\
-  sum = sum + (sum + 1)\ if sum >= 1000 {\ break\
-  }\
+while  true {
+  sum = sum + (sum + 1)
+  if sum >= 1000 {
+    break
+  }
 }
-
- |
+```
 
 Here, the loop condition is true, so the loop would normally iterate forever. However, the break means the while loop will exit once the sum is greater than or equal to 1000. Neat!
 
@@ -1075,21 +963,17 @@ Before you dive into the for loop statement, you need to know about the **Range*
 
 First, there's **closed range**, which you represent like so:
 
-|
-
+```
 let closedRange = 0...5
-
- |
+```
 
 The three dots (...) indicate that this range is closed, which means the range goes from 0 to 5 inclusive. That's the numbers (0, 1, 2, 3, 4, 5).
 
 Second, there's half-open range, which you represent like so:
 
-|
-
+```
 let halfOpenRange = 0..<5
-
- |
+```
 
 Here, you replace the three dots with two dots and a less-than sign (..<). Half-open means the range goes from 0 to 5, inclusive of 0 but *not* of 5. That's the numbers (0, 1, 2, 3, 4).
 
@@ -1104,28 +988,24 @@ In the previous section, you looked at while loops. Now that you know about rang
 
 You construct a for loop like this:
 
-|
-
-for <CONSTANT> in <RANGE> {\
-  <LOOP  CODE>\
+```
+for <CONSTANT> in <RANGE> {
+  <LOOP  CODE>
 }
-
- |
+```
 
 The loop begins with the for keyword, followed by a name given to the loop constant (more on that shortly), followed by in, followed by the range to loop through.
 
 Here's an example:
 
-|
-
-let  count = 10\
+```
+let  count = 10
 var sum = 0
 
-for i in  1...count {\
-  sum += i\
+for i in  1...count {
+  sum += i
 }
-
- |
+```
 
 In the code above, the for loop iterates through the range 1 to count. At the first iteration of the loop, i will equal the first element in the range: 1. Each time around the loop, i will increment until it's equal to count; the loop will execute one final time and then finish.
 
@@ -1135,27 +1015,27 @@ Inside the loop, you add i to the sum variable; it runs 10 times to calculate th
 
 Here are the values of the constant i and variable sum for each iteration:
 
-● **Start of iteration 1:**  i = 1, sum = 0
+- **Start of iteration 1:**  i = 1, sum = 0
 
-● **Start of iteration 2:**  i = 2, sum = 1
+- **Start of iteration 2:**  i = 2, sum = 1
 
-● **Start of iteration 3:**  i = 3, sum = 3
+- **Start of iteration 3:**  i = 3, sum = 3
 
-● **Start of iteration 4:**  i = 4, sum = 6
+- **Start of iteration 4:**  i = 4, sum = 6
 
-● **Start of iteration 5:**  i = 5, sum = 10
+- **Start of iteration 5:**  i = 5, sum = 10
 
-● **Start of iteration 6:**  i = 6, sum = 15
+- **Start of iteration 6:**  i = 6, sum = 15
 
-● **Start of iteration 7:**  i = 7, sum = 21
+- **Start of iteration 7:**  i = 7, sum = 21
 
-● **Start of iteration 8:**  i = 8, sum = 28
+- **Start of iteration 8:**  i = 8, sum = 28
 
-● **Start of iteration 9:**  i = 9, sum = 36
+- **Start of iteration 9:**  i = 9, sum = 36
 
-● **Start of iteration 10:**  i = 10, sum = 45
+- **Start of iteration 10:**  i = 10, sum = 45
 
-● **After iteration 10:**  sum = 55
+- **After iteration 10:**  sum = 55
 
 In terms of scope, the i constant is only visible inside the scope of the for loop, which means it's not available outside of the loop.
 
@@ -1173,31 +1053,28 @@ This graph lets you visualize the sum variable as the loop iterates.
 
 Finally, sometimes you only want to loop a certain number of times, and so you don't need to use the loop constant at all. In that case, you can employ the underscore to indicate you're ignoring it, like so:
 
-|
-
-let  count = 10\
-var sum = 1\
+```
+let  count = 10
+var sum = 1
 var lastSum = 0
 
-for  _  in  0..<count {\ let temp = sum\
-  sum = sum + lastSum\
+for  _  in  0..<count {
+  let temp = sum
+  sum = sum + lastSum
   lastSum = temp
-
- |
+```
 
 This code doesn't require a loop constant; the loop simply needs to run a certain number of times. In this case, the range is 0 through count and is half-open. This is the usual way of writing loops that run a certain number of times.
 
 It's also possible to only perform the iteration under certain conditions. For example, imagine you wanted to compute a sum similar to that of triangle numbers, but only for odd numbers:
 
-|
-
-let  count = 10\
-var sum = 0\
-for i in  1...count  where i % 2 == 1 {\
-  sum += i\
+```
+let  count = 10
+var sum = 0
+for i in  1...count  where i % 2 == 1 {
+  sum += i
 }
-
- |
+```
 
 The loop above has a where clause in the for loop statement. The loop still runs through all values in the range 1 to count, but it will only execute the loop's code block when the where condition is true; in this case, where i is odd.
 
@@ -1208,15 +1085,16 @@ Another way to control flow is through the use of a switch statement, which lets
 
 Here's a very simple switch statement that acts on an integer:
 
-|
-
+```
 let number = 10
 
-switch number {\case  0:\ print("Zero")\
-default:\ print("Non-zero")\
+switch number {
+case  0:
+  print("Zero")
+default:
+  print("Non-zero")
 }
-
- |
+```
 
 In this example, the code will print the following:
 
@@ -1228,29 +1106,31 @@ To handle a specific case, you use case followed by the value you want to check 
 
 Here's another example:
 
-|
-
+```
 let number = 10
 
-switch number {\case  10:\ print("It's ten!")\
-default:\ break\
+switch number {
+case  10:
+  print("It's ten!")
+default:
+  break
 }
-
- |
+```
 
 This time you check for 10, in which case, you print a message. Nothing should happen for other values. When you want nothing to happen for a case, or you want the default state to run, you use the break statement. This tells Swift that you *meant* to not write any code here and that nothing should happen. Cases can never be empty, so you *must* write some code, even if it's just a break!
 
 Of course, switch statements also work with data types other than integers. They work with any data type! Here's an example of switching on a string:
 
-|
-
+```
 let string = "Dog"
 
-switch string {\case  "Cat", "Dog":\ print("Animal is a house pet.")\
-default:\ print("Animal is not a house pet.")\
+switch string {
+case  "Cat", "Dog":
+  print("Animal is a house pet.")
+default:
+  print("Animal is not a house pet.")
 }
-
- |
+```
 
 This will print the following:
 
@@ -1262,28 +1142,27 @@ In this example, you provide two values for the case, meaning that if the value 
 
 You can also give your switch statements more than one case. In the previous section, you saw an if statement using multiple else-if statements to convert an hour of the day to a string describing that part of the day. You could rewrite that more succinctly with a switch statement, like so:
 
-|
-
-let hourOfDay = 12\
+```
+let hourOfDay = 12
 let timeOfDay: String
 
-switch hourOfDay {\case  0, 1, 2, 3, 4, 5:\
-  timeOfDay = "Early morning"\
-case  6, 7, 8, 9, 10, 11:\
-  timeOfDay = "Morning"\
-case  12, 13, 14, 15, 16:\
-  timeOfDay = "Afternoon"\
-case  17, 18, 19:\
-  timeOfDay = "Evening"\
-case  20, 21, 22, 23:\
-  timeOfDay = "Late evening"\
-default:\
-  timeOfDay = "INVALID HOUR!"\
+switch hourOfDay {
+  case  0, 1, 2, 3, 4, 5:
+  timeOfDay = "Early morning"
+case  6, 7, 8, 9, 10, 11:
+  timeOfDay = "Morning"
+case  12, 13, 14, 15, 16:
+  timeOfDay = "Afternoon"
+case  17, 18, 19:
+  timeOfDay = "Evening"
+case  20, 21, 22, 23:
+  timeOfDay = "Late evening"
+default:
+  timeOfDay = "INVALID HOUR!"
 }
 
 print(timeOfDay)
-
- |
+```
 
 This code will print the following:
 
@@ -1291,26 +1170,25 @@ Afternoon
 
 Remember ranges? Well, you can use ranges to simplify this switch statement. You can rewrite it using ranges as shown below:
 
-|
-
-let hourOfDay = 12\
+```
+let hourOfDay = 12
 let timeOfDay: String
 
-switch hourOfDay {\case  0...5:\
-  timeOfDay = "Early morning"\
-case  6...11:\
-  timeOfDay = "Morning"\
-case  12...16:\
-  timeOfDay = "Afternoon"\
-case  17...19:\
-  timeOfDay = "Evening"\
-case  20..<24:\
-  timeOfDay = "Late evening"\
-default:\
-  timeOfDay = "INVALID HOUR!"\
+switch hourOfDay {
+case  0...5:
+  timeOfDay = "Early morning"
+case  6...11:
+  timeOfDay = "Morning"
+case  12...16:
+  timeOfDay = "Afternoon"
+case  17...19:
+  timeOfDay = "Evening"
+case  20..<24:
+  timeOfDay = "Late evening"
+default:
+  timeOfDay = "INVALID HOUR!"
 }
-
- |
+```
 
 This is more succinct than writing out each value individually for all cases.
 
@@ -1318,15 +1196,16 @@ When there are multiple cases, the statement will execute the first one that mat
 
 It's also possible to match a case to a condition based on a property of the value. As you learned in the first part of this tutorial series, you can use the modulo operator to determine if an integer is even or odd. Consider this code:
 
-|
-
+```
 let number = 10
 
-switch number {\case  let x where x % 2 == 0:\ print("Even")\
-default:\ print("Odd")\
+switch number {
+case  let x where x % 2 == 0:
+  print("Even")
+default:
+  print("Odd")
 }
-
- |
+```
 
 This will print the following:
 
@@ -1338,32 +1217,37 @@ The method by which you can match values based on conditions is known as **patte
 
 In the previous example, the binding introduced a unnecessary constant x; it's simply another name for number. You are allowed to use number in the whereclause and replace the binding with an underscore to ignore it:
 
-|
-
+```
 let number = 10
 
-switch number {\case  _  where number % 2 == 0:\ print("Even")\
-default:\ print("Odd")\
+switch number {
+case  _  where number % 2 == 0:
+  print("Even")
+default: 
+  print("Odd")
 }
-
- |
+```
 
 ### **Partial Matching**
 
 Another way you can use switch statements with matching to great effect is as follows:
 
-|
-
+```
 let coordinates = (x: 3, y: 2, z: 5)
 
-switch coordinates {\case (0, 0, 0): // 1\ print("Origin")\
-case (_, 0, 0): // 2\ print("On the x-axis.")\
-case (0, _, 0): // 3\ print("On the y-axis.")\
-case (0, 0, _): // 4\ print("On the z-axis.")\
-default: // 5\ print("Somewhere in space")\
+switch coordinates {
+case (0, 0, 0): // 1
+  print("Origin")
+case (_, 0, 0): // 2
+  print("On the x-axis.")
+case (0, _, 0): // 3
+  print("On the y-axis.")
+case (0, 0, _): // 4
+  print("On the z-axis.")
+default: // 5
+  print("Somewhere in space")
 }
-
- |
+```
 
 This switch statement makes use of **partial matching**. Here's what each case does, in order:
 
@@ -1379,18 +1263,22 @@ This switch statement makes use of **partial matching**. Here's what each case d
 
 You're using the underscore to mean that you don't care about the value. If you don't want to ignore the value, then you can bind it and use it in your switch statement, like this:
 
-|
-
+```
 let coordinates = (x: 3, y: 2, z: 5)
 
-switch coordinates {\case (0, 0, 0):\ print("Origin")\
-case (let x, 0, 0):\ print("On the x-axis at x = \(x)")\
-case (0, let y, 0):\ print("On the y-axis at y = \(y)")\
-case (0, 0, let z):\ print("On the z-axis at z = \(z)")\
-case  let (x, y, z):\ print("Somewhere in space at x = \(x), y = \(y), z = \(z)")\
+switch coordinates {
+case (0, 0, 0):
+ print("Origin")
+case (let x, 0, 0):
+ print("On the x-axis at x = \(x)")
+case (0, let y, 0):
+ print("On the y-axis at y = \(y)")
+case (0, 0, let z):
+ print("On the z-axis at z = \(z)")
+case  let (x, y, z):
+ print("Somewhere in space at x = \(x), y = \(y), z = \(z)")
 }
-
- |
+```
 
 Here, the axis cases use the let syntax to pull out the pertinent values. The code then prints the values using string interpolation to build the string.
 
@@ -1400,15 +1288,17 @@ Also notice how you could use a single let to bind all values of the tuple: let 
 
 Finally, you can use the same let-where syntax you saw earlier to match more complex cases. For example:
 
-|
-
+```
 let coordinates = (x: 3, y: 2, z: 5)
 
-switch coordinates {\case  let (x, y, _) where y == x:\ print("Along the y = x line.")\
-case  let (x, y, _) where y == x * x:\ print("Along the y = x^2 line.")\
-default:\ break
-
- |
+switch coordinates {
+case  let (x, y, _) where y == x:
+ print("Along the y = x line.")
+case  let (x, y, _) where y == x * x:
+ print("Along the y = x^2 line.")
+default:
+ break
+```
 
 } Here, you match the "y equals x" and "y equals x squared" lines.
 
@@ -1432,48 +1322,44 @@ For more about these capabilities, see [Properties](https://docs.swift.org/swift
 
 You introduce enumerations with the enum keyword and place their entire definition within a pair of braces:
 
-|
-
-enum  SomeEnumeration {\ // enumeration definition goes here\
+```
+enum  SomeEnumeration {
+ // enumeration definition goes here
 }
-
- |
+```
 
 Here's an example for the four main points of a compass:
 
-|
-
-enum  CompassPoint {\ case north\ case south\ case east\ case west\
+```
+enum  CompassPoint {
+ case north
+ case south
+ case east
+ case west
 }
-
- |
+```
 
 The values defined in an enumeration (such as north, south, east, and west) are its *enumeration cases*. You use the case keyword to introduce new enumeration cases.
 
 Multiple cases can appear on a single line, separated by commas:
 
-|
-
-enum  Planet {\ case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune\
+```
+enum  Planet {
+ case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
 }
-
- |
+```
 
 Each enumeration definition defines a new type. Like other types in Swift, their names (such as CompassPoint and Planet) should start with a capital letter. Give enumeration types singular rather than plural names, so that they read as self-evident:
 
-|
-
+```
 var directionToHead = CompassPoint.west
-
- |
+```
 
 The type of directionToHead is inferred when it is initialized with one of the possible values of CompassPoint. Once directionToHead is declared as a CompassPoint, you can set it to a different CompassPoint value using a shorter dot syntax:
 
-|
-
+```
 directionToHead = .east
-
- |
+```
 
 The type of directionToHead is already known, and so you can drop the type when setting its value. This makes for highly readable code when working with explicitly typed enumeration values.
 
@@ -1482,17 +1368,20 @@ The type of directionToHead is already known, and so you can drop the type when 
 
 You can match individual enumeration values with a switch statement:
 
-|
-
-directionToHead = .south\
-switch directionToHead {\case .north:\ print("Lots of planets have a north")\
-case .south:\ print("Watch out for penguins")\
-case .east:\ print("Where the sun rises")\
-case .west:\ print("Where the skies are blue")\
-}\
+```
+directionToHead = .south
+switch directionToHead {
+case .north:
+ print("Lots of planets have a north")
+case .south:
+ print("Watch out for penguins")
+case .east:
+ print("Where the sun rises")
+case .west:
+ print("Where the skies are blue")
+}
 // Prints "Watch out for penguins"
-
- |
+```
 
 You can read this code as:
 
@@ -1504,15 +1393,16 @@ As described in [Control Flow](https://docs.swift.org/swift-book/LanguageGuide/C
 
 When it is not appropriate to provide a case for every enumeration case, you can provide a default case to cover any cases that are not addressed explicitly:
 
-|
-
-let somePlanet = Planet.earth\
-switch somePlanet {\case .earth:\ print("Mostly harmless")\
-default:\ print("Not a safe place for humans")\
-}\
+```
+let somePlanet = Planet.earth
+switch somePlanet {
+case .earth:
+  print("Mostly harmless")
+default:
+  print("Not a safe place for humans")
+}
 // Prints "Mostly harmless"
-
- |
+```
 
 Enums are one of the most powerful tools on swift, they have many more functionalities and aplications, for more information about enums visit: <https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html>
 
@@ -1525,13 +1415,11 @@ Here's an example of how optionals can be used to cope with the absence of a val
 
 The example below uses the initializer to try to convert a String into an Int:
 
-|
-
-let possibleNumber = "123"\
-let convertedNumber = Int(possibleNumber)\
+```
+let possibleNumber = "123"
+let convertedNumber = Int(possibleNumber)
 // convertedNumber is inferred to be of type "Int?", or "optional Int"
-
- |
+```
 
 Because the initializer might fail, it returns an *optional* Int, rather than an Int. An optional Int is written as Int?, not Int. The question mark indicates that the value it contains is optional, meaning that it might contain *some* Int value, or it might contain *no value at all*. (It can't contain anything else, such as a Bool value or a String value. It's either an Int, or it's nothing at all.)
 
@@ -1539,14 +1427,12 @@ Because the initializer might fail, it returns an *optional* Int, rather than an
 
 You set an optional variable to a valueless state by assigning it the special value  nil:
 
-|
-
-var serverResponseCode: Int? = 404\
-// serverResponseCode contains an actual Int value of 404\
-serverResponseCode = nil\
+```
+var serverResponseCode: Int? = 404
+// serverResponseCode contains an actual Int value of 404
+serverResponseCode = nil
 // serverResponseCode now contains no value
-
- |
+```
 
 NOTE
 
@@ -1554,12 +1440,10 @@ You can't use nil with nonoptional constants and variables. If a constant or var
 
 If you define an optional variable without providing a default value, the variable is automatically set to nil for you:
 
-|
-
-var surveyAnswer: String?\
+```
+var surveyAnswer: String?
 // surveyAnswer is automatically set to nil
-
- |
+```
 
 NOTE
 
@@ -1571,23 +1455,21 @@ You can use an if statement to find out whether an optional contains a value by 
 
 If an optional has a value, it's considered to be "not equal to" nil:
 
-|
-
-if convertedNumber != nil {\ print("convertedNumber contains some integer value.")\
-}\
+```
+if convertedNumber != nil { 
+    print("convertedNumber contains some integer value.")
+}
 // Prints "convertedNumber contains some integer value."
-
- |
+```
 
 Once you're sure that the optional *does* contain a value, you can access its underlying value by adding an exclamation mark (!) to the end of the optional's name. The exclamation mark effectively says, "I know that this optional definitely has a value; please use it." This is known as *forced unwrapping* of the optional's value:
 
-|
-
-if convertedNumber != nil {\ print("convertedNumber has an integer value of \(convertedNumber!).")\
-}\
+```
+if convertedNumber != nil {
+    print("convertedNumber has an integer value of \(convertedNumber!).")
+}
 // Prints "convertedNumber has an integer value of 123."
-
- |
+```
 
 For more about the if statement, see [Control Flow](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html).
 
@@ -1601,24 +1483,22 @@ You use *optional binding* to find out whether an optional contains a value, and
 
 Write an optional binding for an if statement as follows:
 
-|
-
-if  let constantName = someOptional {\
-   statements\
+```
+if  let constantName = someOptional {
+   statements
 }
-
- |
+```
 
 You can rewrite the possibleNumber example from the [Optionals](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID330) section to use optional binding rather than forced unwrapping:
 
-|
-
-if  let actualNumber = Int(possibleNumber) {\ print("The string \"\(possibleNumber)\" has an integer value of \(actualNumber)")\
-} else {\ print("The string \"\(possibleNumber)\" could not be converted to an integer")\
-}\
+```
+if  let actualNumber = Int(possibleNumber) {
+    print("The string \"\(possibleNumber)\" has an integer value of \(actualNumber)")
+} else {
+    print("The string \"\(possibleNumber)\" could not be converted to an integer")
+}
 // Prints "The string "123" has an integer value of 123"
-
- |
+```
 
 This code can be read as:
 
@@ -1630,19 +1510,21 @@ You can use both constants and variables with optional binding. If you wanted to
 
 You can include as many optional bindings and Boolean conditions in a single if  statement as you need to, separated by commas. If any of the values in the optional bindings are nil or any Boolean condition evaluates to false, the whole if statement's condition is considered to be false. The following if statements are equivalent:
 
-|
-
-if  let firstNumber = Int("4"), let secondNumber = Int("42"), firstNumber < secondNumber && secondNumber < 100 {\ print("\(firstNumber) < \(secondNumber) < 100")\
-}\
+```
+if  let firstNumber = Int("4"), let secondNumber = Int("42"), firstNumber < secondNumber && secondNumber < 100 {
+    print("\(firstNumber) < \(secondNumber) < 100")
+}
 // Prints "4 < 42 < 100"
 
-if  let firstNumber = Int("4") {\ if  let secondNumber = Int("42") {\ if firstNumber < secondNumber && secondNumber < 100 {\ print("\(firstNumber) < \(secondNumber) < 100")\
-       }\
-   }\
-}\
+if  let firstNumber = Int("4") {
+    if  let secondNumber = Int("42") {
+        if firstNumber < secondNumber && secondNumber < 100 {
+            print("\(firstNumber) < \(secondNumber) < 100")
+        }
+    }
+}
 // Prints "4 < 42 < 100"
-
- |
+```
 
 NOTE
 
@@ -1660,8 +1542,7 @@ Implicitly unwrapped optionals are useful when an optional's value is confirmed 
 
 An implicitly unwrapped optional is a normal optional behind the scenes, but can also be used like a nonoptional value, without the need to unwrap the optional value each time it's accessed. The following example shows the difference in behavior between an optional string and an implicitly unwrapped optional string when accessing their wrapped value as an explicit String:
 
-|
-
+```
 let possibleString: String? = "An optional string."
 
 let forcedString: String = possibleString! // requires an exclamation mark
@@ -1669,8 +1550,7 @@ let forcedString: String = possibleString! // requires an exclamation mark
 let assumedString: String! = "An implicitly unwrapped optional string."
 
 let implicitString: String = assumedString // no need for an exclamation mark
-
- |
+```
 
 You can think of an implicitly unwrapped optional as giving permission for the optional to be unwrapped automatically whenever it's used. Rather than placing an exclamation mark after the optional's name each time you use it, you place an exclamation mark after the optional's type when you declare it.
 
@@ -1680,23 +1560,21 @@ If an implicitly unwrapped optional is nil and you try to access its wrapped val
 
 You can still treat an implicitly unwrapped optional like a normal optional, to check if it contains a value:
 
-|
-
-if assumedString != nil {\ print(assumedString!)\
-}\
+```
+if assumedString != nil {
+    print(assumedString!)
+}
 // Prints "An implicitly unwrapped optional string."
-
- |
+```
 
 You can also use an implicitly unwrapped optional with optional binding, to check and unwrap its value in a single statement:
 
-|
-
-if  let definiteString = assumedString {\ print(definiteString)\
-}\
+```
+if  let definiteString = assumedString {
+    print(definiteString)
+}
 // Prints "An implicitly unwrapped optional string."
-
- |
+```
 
 NOTE
 
@@ -1705,8 +1583,6 @@ Don't use an implicitly unwrapped optional when there's a possibility of a varia
 Further Reading
 ---------------
 
-● [Structs and Classes](https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html)
-
-● [Functions](https://docs.swift.org/swift-book/LanguageGuide/Functions.html)
-
-● [Closures](https://docs.swift.org/swift-book/LanguageGuide/Closures.html)
+- [Structs and Classes](https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html)
+- [Functions](https://docs.swift.org/swift-book/LanguageGuide/Functions.html)
+- [Closures](https://docs.swift.org/swift-book/LanguageGuide/Closures.html)
