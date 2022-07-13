@@ -129,7 +129,7 @@ onSuccess(books)
 
 En el primer guard nos fijamos si podemos convertir el resultado a Data, en caso de no poder llamamos a la función onError, ya que recibimos datos incorrectos. En el segundo guard nos fijamos si ese Data lo podemos convertir a un array de libros [Book]. En caso de que falle también llamamos a la función de error. Finalmente si logramos transformar los datos llamamos a la función onSuccess con la lista de los libros que recibimos.
 
-Solo nos falta definir el Error que estamos devolviendo cuando falla la conversión de los datos, lo podemos hacer de la siguiente forma:
+Solo nos falta definir el tipo de error que estamos devolviendo cuando falla la conversión de los datos. Lo podemos hacer de la siguiente forma:
 
 ```Swift
 enum BookError: Error {
@@ -137,7 +137,7 @@ enum BookError: Error {
 }
 ```
 
-El código final del repositorio nos queda:
+El código final del repository sería:
 
 ```Swift
 import Result
@@ -176,7 +176,7 @@ enum BookError: Error {
 }
 ```
 
-Luego para realizar una request por ejemplo hacemos: 
+Luego, para realizar una request hacemos: 
  
 ```Swift
 let onSuccess = { books in
@@ -190,4 +190,4 @@ let onError = { error in
 repository.fetchBooks(onSuccess: onSuccess, onError: onError)
 ```
 
-En este caso estamos imprimiendo los datos o el error que obtengamos de la request, en el caso del training en onSuccess habría que guardar los datos en el ViewModel y recargar la tabla, y en onError mostrar un Alert informando que ocurrió un error.
+En este caso estamos imprimiendo los datos o el error que obtengamos de la request. En el caso del training, `onSuccess` debería guardar los datos en el view model y recargar la tabla, mientras que `onError` debería mostrar un Alert informando que ocurrió un error.
